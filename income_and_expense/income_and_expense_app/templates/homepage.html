@@ -1,0 +1,167 @@
+<html>
+<head>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<style type="text/css">
+    body
+{
+	background:white;
+}
+
+h1
+{
+	color:black;
+	margin:40px 0 60px 0;
+	font-weight:300;
+}
+
+.our-team-main
+{
+	width:100%;
+	height:auto;
+	border-bottom:5px #323233 solid;
+	background:#fff;
+	text-align:center;
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+	transition:0.5s;
+	margin-bottom:28px;
+}
+
+
+.our-team-main img
+{
+	border-radius:50%;
+	margin-bottom:20px;
+	width: 90px;
+}
+
+.our-team-main h3
+{
+	font-size:20px;
+	font-weight:700;
+}
+
+.our-team-main p
+{
+	margin-bottom:0;
+}
+
+.team-back
+{
+	width:100%;
+	height:auto;
+	position:absolute;
+	top:0;
+	left:0;
+	padding:5px 15px 0 15px;
+	text-align:left;
+	background:#fff;
+
+}
+
+.team-front
+{
+	width:100%;
+	height:auto;
+	position:relative;
+	z-index:10;
+	background:#fff;
+	padding:15px;
+	bottom:0px;
+	transition: all 0.5s ease;
+}
+
+.our-team-main:hover .team-front
+{
+	bottom:-200px;
+	transition: all 0.5s ease;
+}
+
+.our-team-main:hover
+{
+	border-color:#777;
+	transition:0.5s;
+}
+
+/*our-team-main*/
+    </style>
+
+
+</head>
+
+<body>
+    <form>
+		<h1 class="text-center">Hello, <b>{{name}}</b></h1>
+    <h1 class="text-center">Your Total Balance is <b>₹ {{balance}}</b></h1>
+
+
+	<div class="container">
+	<div class="row">
+
+
+	<div class="col-lg-4">
+	<div class="our-team-main">
+
+	<div class="team-front">
+	<h3>Create Entry</h3>
+
+	</div>
+
+	<div class="team-back">
+	<span>
+		<b><a href="{% url 'create_entry' %}">Create a new entry for Income/Expense</a></b>
+	</span>
+	</div>
+
+	</div>
+	</div>
+
+
+
+	<div class="col-lg-4">
+	<div class="our-team-main">
+
+	<div class="team-front">
+	<h3>View/Delete Entry</h3>
+
+	</div>
+
+	<div class="team-back">
+	<span>
+	<b><a href="{% url 'view_entry' %}">View/Delete your Income and Expense entries</a></b>
+	</span>
+	</div>
+
+	</div>
+	</div>
+
+
+	<div class="col-lg-4">
+	<div class="our-team-main">
+
+	<div class="team-front">
+	<h3>Logout</h3>
+
+	</div>
+
+	<div class="team-back">
+	<span>
+	<b><a href="{% url 'log_out' %}">Log out of the application</a></b>
+	</span>
+	</div>
+
+	</div>
+	</div>
+
+
+
+
+	</div>
+	</div>
+        </form>
+</body>
+</html>
